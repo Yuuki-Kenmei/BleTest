@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">MogakiController</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_version">Ver. 1.0.0</string>
+    <string name="title_copyright">© 2022 Yuuki.Kenmei</string>
+
+    <string name="menu_list_connect">一覧から選んで接続</string>
+    <string name="menu_list_qr">QR読込から接続</string>
+    <string name="menu_list_change">接続方式変更</string>
+    <string name="menu_list_setting">設定</string>
+    <string name="menu_list_help">ヘルプ</string>
+
+    <string name="help_title">★ Mogaki Controllerについて ★</string>
+    <string name="help_1">■初めに\n「Mogaki Controller」（以下、本アプリ）は個人により製作されたもので、いかなる環境においても動作保証はしておらず、本アプリの使用により生じた不利益について製作者は一切の責任を負いません。\n本アプリおよび本アプリのソースコードの著作権は製作者に帰属します。複製、転載、再配布は自由ですが、製作者の許可なく本アプリおよびソースコードを商用利用することを禁止します。ただし、参考にして作成されたものについてはその限りではありません。\n本アプリはカメラ機能およびBluetooth機能、位置情報にアクセスしますが、取得したデータを保存およびBluetooth接続機器以外の外部への送信は一切行っておりません。\nBluetooth接続機能を使用するために、接続先として必要なハードウェア、ソフトウェアを用意し、必要に応じた設定を行ってください。\n</string>
+    <string name="help_2">■使い方（メニュー）</string>
+    <string name="help_3">・一覧から選んで接続\n接続方式が「Bluetooth接続」の場合、ペアリング済みの接続先一覧が表示されます。\n接続方式が「BLE接続」の場合、周囲の対応機器をスキャンした一覧が表示されます。\n接続先を選択すると該当機器への接続および通信を試行します。\n（接続前に必ず接続先機器についてBluetoothまたはBLE接続可能な状態にしてください。）\n</string>
+    <string name="help_4">・QR読込から接続\n（現在使用できないうえ、実装予定もありません。）\nカメラ機能が起動され、2次元バーコードを読み込むことができます。\n接続方式が「Bluetooth接続」または「BLE接続」問わず、どちらもBDアドレスが保存された2次元バーコードを読み込むことで該当機器への接続および通信を試行します。\n（「Bluetooth接続」の場合、必ず先にペアリングを行ってください。「BLE接続」の場合、必ず先にBLE接続可能な状態にしてください。）\n</string>
+    <string name="help_5">・設定\n設定画面へ遷移します。接続方式が「Bluetooth接続」か「BLE接続」かにより設定できる項目は変更されます。\n--接続方式\n（BluetoothまたはBLE）\n--UUID\n（「Bluetooth接続」の場合のみ、必ず接続先機器の設定と一致させてください。）\n--UUID（サービス）\n（「BLE接続」の場合のみ、必ず接続先機器の設定と一致させてください。）\n--UUID（キャラクタリスティック）\n（「BLE接続」の場合のみ、必ず接続先機器の設定と一致させてください。）\n--スティック最大傾け時の送信値\n（1～1000までの整数）\n--X軸送信値正負\n（デフォルトは右に傾けると正、左に傾けると負。）\n--Y軸送信値正負\n（デフォルトは上に傾けると正、下に傾けると負。）\n--送信変更閾値\n（指定値以上の割合でスティックが移動した場合に接続先機器へ値の送信を行います。\n例）10%とした場合、スティックがX、Yどちらかの方向で前回送信値から10%以上移動したとき、接続先機器へ値を送信します。）\n</string>
+    <string name="help_6">・ヘルプ\nヘルプ画面（現在の画面）を表示します。\n</string>
+    <string name="help_7">■表示説明（メイン画面）</string>
+    <string name="help_8">・接続方式：現在の接続方式（BluetoothまたはBLE）を表示します。</string>
+    <string name="help_9">・接続先：接続先の名称とBDアドレスを表示します。</string>
+    <string name="help_10">・送信値：スティック操作による前回送信値を表示します。</string>
+
+    <string name="setting_title">設定一覧</string>
+    <string name="setting_method">■接続方式</string>
+    <string name="setting_method_toggle_bluetooth">Bluetooth</string>
+    <string name="setting_method_toggle_ble">BLE</string>
+    <string name="setting_uuid">■UUID</string>
+    <string name="setting_uuid_service">■UUID（サービス）</string>
+    <string name="setting_uuid_characteristic">■UUID（キャラクタリスティック）</string>
+    <string name="setting_button_clear">クリア</string>
+    <string name="setting_button_default">デフォルト</string>
+    <string name="setting_button_apply">更新</string>
+    <string name="setting_uuidhint">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</string>
+    <string name="setting_sendmax">■スティック最大傾け時の送信値</string>
+    <string name="setting_xaxis">■X軸送信正負</string>
+    <string name="setting_xaxis_switch">右に傾けたときの送信値をマイナス値にする</string>
+    <string name="setting_yaxis">■Y軸送信正負</string>
+    <string name="setting_yaxis_switch">上に傾けたときの送信値をマイナス値にする</string>
+    <string name="setting_threshold">■送信変更閾値</string>
+
+    <string-array name="setting_threshold_array">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string name="alert_title_error">エラー!!</string>
+    <string name="alert_title_confirm">確認</string>
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_yes">Yes</string>
+    <string name="alert_button_no">No</string>
+    <string name="alert_message_confirm_end">終了します、よろしいですか。</string>
+    <string name="alert_message_confirm_disconnect">通信を切断します、よろしいですか。</string>
+    <string name="alert_message_confirm_newconnect">現在の通信を切断します、よろしいですか。</string>
+    <string name="alert_message_uuid">正しい桁数、書式で入力してください。\n「XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX」</string>
+    <string name="alert_message_sendmax_zero">0は設定できません。</string>
+    <string name="alert_message_bluetooth_notsuport">Bluetoothがサポートされていないため、終了します。</string>
+    <string name="alert_message_permission_ng">指定された権限を付与しない場合、本アプリは使用できません。</string>
+    <string name="alert_message_bluetooth_connect_error_1">接続に失敗しました\n接続機器の準備ができていないか、設定に誤りがあります。</string>
+    <string name="alert_message_bluetooth_connect_error_2">接続しましたが通信に失敗しました、\nもう一度接続を試行してください。</string>
+    <string name="alert_message_ble_connect_error_1">接続しましたがサービスを取得できませんでした、\n設定を確認してください。</string>
+    <string name="alert_message_ble_connect_error_2">接続しましたがGATTサーバを取得できませんでした、\n接続機器の状態を確認し、もう一度接続を試行してください。</string>
+    <string name="alert_message_permission_denied">権限が不足しています。\n権限を付与してから再試行してください。</string>
+
+    <string name="toast_connect">接続しました。</string>
+    <string name="toast_disconnect">切断しました。</string>
+    <string name="toast_update">更新しました。</string>
+    <string name="toast_cancel">中止しました。</string>
+    <string name="toast_bluetooth_not">BluetoothがOnにされなかったため、終了します。</string>
+
+    <string name="bluetoothlist_title">ペアリング済機器一覧</string>
+    <string name="blelist_title">スキャン機器一覧</string>
+    <string name="blelist_rescan">再スキャン</string>
+
+    <string name="main_method">・現在の接続方式</string>
+    <string name="main_state">・接続状態</string>
+    <string name="main_connect">・接続先</string>
+    <string name="main_send">・送信値</string>
+    <string name="main_sendX">X（横軸）</string>
+    <string name="main_sendY">Y（縦軸）</string>
+    <string name="main_button_disconnect">切断</string>
+    <string name="main_state_disconnect">未接続</string>
+    <string name="main_state_connect">接続中</string>
+
+</resources>
